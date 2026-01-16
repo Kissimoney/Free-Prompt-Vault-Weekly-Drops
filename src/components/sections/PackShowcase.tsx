@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Check, Star } from 'lucide-react';
 import { BEST_SELLERS } from '../../data/constants';
 import { Button } from '../ui/Button';
@@ -31,7 +32,7 @@ export const PackShowcase = () => {
 
                 <div className="bg-white rounded-[40px] shadow-xl overflow-hidden relative min-h-[600px] flex flex-col md:flex-row">
                     {/* Image Side */}
-                    <div className="md:w-1/2 relative h-[300px] md:h-auto overflow-hidden group">
+                    <Link to={`/pack/${activePack.id}`} className="md:w-1/2 relative h-[300px] md:h-auto overflow-hidden group block cursor-pointer">
                         <div className="absolute inset-0 bg-deepBlue/10 group-hover:bg-transparent transition-colors z-10"></div>
                         <img
                             src={activePack.image}
@@ -43,7 +44,7 @@ export const PackShowcase = () => {
                                 {activePack.badge || 'Featured'}
                             </span>
                         </div>
-                    </div>
+                    </Link>
 
                     {/* Content Side */}
                     <div className="md:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center relative">
@@ -83,9 +84,11 @@ export const PackShowcase = () => {
                             ))}
                         </div>
 
-                        <Button className="w-full py-5 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all">
-                            Get This Pack
-                        </Button>
+                        <Link to={`/pack/${activePack.id}`}>
+                            <Button className="w-full py-5 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all">
+                                Get This Pack
+                            </Button>
+                        </Link>
                     </div>
                 </div>
 
