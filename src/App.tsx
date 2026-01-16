@@ -14,6 +14,7 @@ import { PackShowcase } from './components/sections/PackShowcase';
 
 import { SEO } from './components/SEO';
 import { StickyCTA } from './components/sections/StickyCTA';
+import { LogoStrip } from './components/sections/LogoStrip';
 
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,6 +39,9 @@ export default function App() {
 
       {/* Hero Section */}
       <Hero scrollTo={scrollTo} />
+
+      {/* Trust Badges */}
+      <LogoStrip />
 
       {/* Vault Preview Section */}
       <VaultPreview scrollTo={scrollTo} />
