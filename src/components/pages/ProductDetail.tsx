@@ -10,6 +10,26 @@ export const ProductDetail = () => {
     const { id } = useParams();
     const product = BEST_SELLERS.find((p) => p.id === id);
 
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [id]);
+
+    const handleBuy = async () => {
+        try {
+            await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/track-intent`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`
+                },
+                body: JSON.stringify({ product_id: product?.name, source: 'pdp_buy_button' })
+            });
+            alert("Redirecting to Stripe Checkout...");
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
     if (!product) {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center bg-white">
@@ -34,7 +54,7 @@ export const ProductDetail = () => {
                 <div className="font-heading font-black text-xl tracking-tight hidden md:block">
                     {product.name}
                 </div>
-                <Button className="py-2 px-4 h-auto text-sm">
+                <Button onClick={handleBuy} className="py-2 px-4 h-auto text-sm">
                     Buy Now {product.price}
                 </Button>
             </nav>
