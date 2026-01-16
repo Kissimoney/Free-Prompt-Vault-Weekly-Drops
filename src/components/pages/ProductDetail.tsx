@@ -126,7 +126,7 @@ export const ProductDetail = () => {
 
                     <div className="mt-auto bg-gray-50 border border-gray-100 p-8 rounded-[32px]">
                         <div className="flex flex-col gap-4">
-                            <Button className="w-full py-5 text-xl shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-3">
+                            <Button onClick={handleBuy} className="w-full py-5 text-xl shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-3">
                                 <ShoppingCart size={24} /> Buy Now - {product.price}
                             </Button>
                             <p className="text-center text-xs text-gray-400 font-medium">
