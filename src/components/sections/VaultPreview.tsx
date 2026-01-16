@@ -72,18 +72,20 @@ export const VaultPreview = ({ scrollTo }: VaultPreviewProps) => {
 
                         {/* Screen Content */}
                         <div className="bg-[#191919] rounded-[8px] overflow-hidden border border-[#333] aspect-[16/10] relative group">
-                            <img
-                                src="https://images.unsplash.com/photo-1667372393119-c85c02088947?auto=format&fit=crop&w=1600&q=80"
-                                alt="Vault Interface Preview"
-                                className="w-full h-full object-cover transition-transform duration-[10s] ease-linear group-hover:scale-110 group-hover:translate-y-[-10%]"
-                            />
+                            <video
+                                className="w-full h-full object-cover transform transition-transform duration-[20s] hover:scale-105"
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                poster="https://images.unsplash.com/photo-1667372393119-c85c02088947?auto=format&fit=crop&w=1600&q=80"
+                            >
+                                <source src="https://cdn.coverr.co/videos/coverr-coding-on-laptop-2-5536/1080p.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
 
-                            {/* Play Button Overlay (Optional Suggestion of Interactivity) */}
-                            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-transparent transition-all">
-                                <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 shadow-lg group-hover:scale-110 transition-transform">
-                                    <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
-                                </div>
-                            </div>
+                            {/* Overlay Gradient for consistency */}
+                            <div className="absolute inset-0 bg-deepBlue/10 pointer-events-none"></div>
                         </div>
 
                         {/* Keyboard Base Reflection suggestion */}
