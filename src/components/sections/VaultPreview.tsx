@@ -80,7 +80,7 @@ export const VaultPreview = ({ scrollTo }: VaultPreviewProps) => {
                                 playsInline
                                 poster="https://images.unsplash.com/photo-1667372393119-c85c02088947?auto=format&fit=crop&w=1600&q=80"
                             >
-                                <source src="https://files.vidstack.io/sprite-fight/720p.mp4" type="video/mp4" />
+                                <source src="/vault-preview.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
