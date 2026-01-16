@@ -1,0 +1,113 @@
+
+import React from 'react';
+import { Sparkles, Image, Video, Mail, Zap, Layout, Terminal, Quote, MessageSquare } from 'lucide-react';
+import { PromptCategory, BestSeller, Testimonial, FAQItem } from '../types';
+
+
+export const PROMPT_CATEGORIES: PromptCategory[] = [
+  { id: '1', label: 'NB', title: 'Nano Banana Images', benefit: 'High-res scene prompts with style consistency.', tag: 'Free', icon: 'Zap' },
+  { id: '2', label: 'V3', title: 'Veo 3 Ad Scenes', benefit: '8-second cinematic sequences, no dialogue by default.', tag: 'Pro', icon: 'Video' },
+  { id: '3', label: 'YT', title: 'YouTube Thumbnails', benefit: 'CTR-first thumbnail prompt packs and Canva codes.', tag: 'Free', icon: 'Image' },
+  { id: '4', label: 'RR', title: 'Reels Captions', benefit: 'Hooks, CTAs, and viral caption patterns.', tag: 'Weekly', icon: 'MessageSquare' },
+  { id: '5', label: 'GL', title: 'Gumroad Listings', benefit: 'Pain / Identity / Results angles and page templates.', tag: 'Free', icon: 'Layout' },
+  { id: '6', label: 'EM', title: 'Email Sequences', benefit: 'Welcome flow + promo sequences that convert.', tag: 'Pro', icon: 'Mail' },
+  { id: '7', label: 'BI', title: 'Brand Identity', benefit: 'Logo directions, palettes, and style guide prompts.', tag: 'Free', icon: 'Layout' },
+  { id: '8', label: 'CC', title: 'Content Calendars', benefit: '30-day content plans with captions + hashtags.', tag: 'Weekly', icon: 'Terminal' },
+];
+
+export const PACK_URLS = {
+  NanoBanana: "https://drive.google.com/file/d/1zk5hYseUKDJBZuj-LUMQjStjEAU9WD_Y/view?usp=sharing",
+  Veo3Ads: "https://drive.google.com/file/d/1tOk4X3EPzeuzJgCydjrLe5aQxMqQZG4J/view?usp=sharing",
+  Thumbnails: "https://drive.google.com/file/d/1vhUHVqiAn91QZECAt3XjBAiYNiA1SNHG/view?usp=sharing",
+  EmailKit: "https://drive.google.com/file/d/158KeSfQ8nv3eferrQv3N_EmMV0X80J-R/view?usp=sharing",
+  Default: "https://drive.google.com/file/d/1zk5hYseUKDJBZuj-LUMQjStjEAU9WD_Y/view?usp=sharing"
+};
+
+
+export const BEST_SELLERS: BestSeller[] = [
+  {
+    id: 'bs1',
+    name: 'Nano Banana Prompt Pack',
+    price: '$17',
+    badge: 'Best Value',
+    bullets: ['50+ Pro Prompts', 'Style Reference Guide', 'Infinite Variations'],
+    ctaLink: '#',
+    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=400'
+  },
+  {
+    id: 'bs2',
+    name: 'Veo 3 Ad Scenes Bundle',
+    price: '$29',
+    badge: '10% Off',
+    originalPrice: '$32',
+    bullets: ['8-second Master Scenes', 'Product Reveal Hooks', 'Color Grading Metadata'],
+    ctaLink: '#',
+    image: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=400'
+  },
+  {
+    id: 'bs3',
+    name: 'Gumroad Listing Wizard',
+    price: '$29',
+    bullets: ['Sales Copy Framework', 'Social Proof Prompts', 'Pricing Psychology'],
+    ctaLink: '#',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400'
+  },
+  {
+    id: 'bs4',
+    name: 'Welcome Email Sequence Pack',
+    price: '$19',
+    badge: 'New',
+    bullets: ['5-Day Indoctrination Flow', 'Subject Line Generator', 'Click-through Mastery'],
+    ctaLink: '#',
+    image: 'https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&q=80&w=400'
+  }
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    id: 't1',
+    name: 'Annie K.',
+    role: 'Creator',
+    stars: 5,
+    quote: 'I used the free pack and instantly bought the bundle. Clean prompts, real results.',
+    avatar: 'https://i.pravatar.cc/150?u=annie'
+  },
+  {
+    id: 't2',
+    name: 'J. Casper',
+    role: 'Digital Products',
+    stars: 5,
+    quote: 'Weekly drops keep me consistent. I don\'t waste time thinking — I just post.',
+    avatar: 'https://i.pravatar.cc/150?u=casper'
+  },
+  {
+    id: 't3',
+    name: 'Mary W.',
+    role: 'Small Business',
+    stars: 5,
+    quote: 'The structure is the secret. Everything feels premium and ready-to-use.',
+    avatar: 'https://i.pravatar.cc/150?u=mary'
+  }
+];
+
+export const FAQS: FAQItem[] = [
+  { question: "How do I receive the free pack?", answer: "Immediate delivery! After signing up, we'll email you a link to the Notion vault containing your 25+ starter prompts." },
+  { question: "How do weekly drops work?", answer: "Every Tuesday, we release a new specialized prompt bundle. Free subscribers get a preview, Pro members get full access." },
+  { question: "Is Stripe checkout active?", answer: "Yes, all transactions are secured by Stripe. You'll receive your digital downloads instantly after payment." },
+  { question: "Can I request custom prompts?", answer: "Yes! Use the request form below. We specialize in building tailored workflows for creators and agencies." },
+  { question: "Can I log everything to Google Sheets?", answer: "Our Pro bundles include automation templates (Zapier/Make) to push AI outputs directly to your favorite CRM or sheets." },
+  { question: "Will this work on mobile?", answer: "Absolutely. Our prompts and Notion-based vault are optimized for mobile, desktop, and tablet use." }
+];
+
+export const getIcon = (name: string) => {
+  switch (name) {
+    case 'Zap': return <Zap size={20} />;
+    case 'Video': return <Video size={20} />;
+    case 'Image': return <Image size={20} />;
+    case 'MessageSquare': return <MessageSquare size={20} />;
+    case 'Layout': return <Layout size={20} />;
+    case 'Mail': return <Mail size={20} />;
+    case 'Terminal': return <Terminal size={20} />;
+    default: return <Sparkles size={20} />;
+  }
+};
