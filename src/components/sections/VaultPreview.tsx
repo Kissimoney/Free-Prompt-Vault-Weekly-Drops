@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { PROMPT_CATEGORIES } from '../../data/constants';
 import { Button } from '../ui/Button';
@@ -26,9 +27,10 @@ export const VaultPreview = ({ scrollTo }: VaultPreviewProps) => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-32">
                 {PROMPT_CATEGORIES.map((cat, i) => (
-                    <button
+                    <Link
+                        to={`/pack/${cat.linkId}`}
                         key={i}
-                        className="bg-white border border-gray-100 p-10 rounded-[40px] transition-[transform,shadow] duration-300 ease-out group hover:shadow-[0_20px_40px_rgba(10,37,64,0.08)] hover:-translate-y-1.5 relative text-left outline-none focus:ring-2 focus:ring-mint focus:ring-offset-2"
+                        className="bg-white border border-gray-100 p-10 rounded-[40px] transition-[transform,shadow] duration-300 ease-out group hover:shadow-[0_20px_40px_rgba(10,37,64,0.08)] hover:-translate-y-1.5 relative text-left outline-none block"
                     >
                         <div className="w-14 h-14 bg-gray-50 text-deepBlue rounded-[22px] flex items-center justify-center font-black text-base mb-8 group-hover:bg-mint group-hover:text-white group-hover:scale-110 group-hover:rotate-3 transition-all uppercase shadow-inner">
                             {cat.label}
@@ -43,7 +45,7 @@ export const VaultPreview = ({ scrollTo }: VaultPreviewProps) => {
                                 <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
                             </div>
                         </div>
-                    </button>
+                    </Link>
                 ))}
             </div>
 

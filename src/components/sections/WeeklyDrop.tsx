@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '../ui/Button';
 
 interface WeeklyDropProps {
@@ -36,12 +37,12 @@ export const WeeklyDrop = ({ scrollTo }: WeeklyDropProps) => {
                     </div>
                 </div>
                 <div className="flex gap-10 lg:gap-12 relative z-10 scale-90 lg:scale-100">
-                    <div className="w-48 h-64 rounded-[40px] bg-gray-200 overflow-hidden shadow-2xl transition-all hover:scale-110 hover:rotate-3 duration-700">
+                    <Link to="/pack/bs2" className="block w-48 h-64 rounded-[40px] bg-gray-200 overflow-hidden shadow-2xl transition-all hover:scale-110 hover:rotate-3 duration-700 cursor-pointer">
                         <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&q=80&w=500" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="w-48 h-64 rounded-[40px] bg-gray-200 overflow-hidden shadow-2xl mt-20 transition-all hover:scale-110 hover:-rotate-3 duration-700">
+                    </Link>
+                    <Link to="/pack/bs2" className="block w-48 h-64 rounded-[40px] bg-gray-200 overflow-hidden shadow-2xl mt-20 transition-all hover:scale-110 hover:-rotate-3 duration-700 cursor-pointer">
                         <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=500" className="w-full h-full object-cover" />
-                    </div>
+                    </Link>
                 </div>
             </div>
         </section>
