@@ -23,6 +23,7 @@ export default {
                 'blink': 'blink 1s step-end infinite',
                 'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite',
                 'dash': 'dash 3s linear infinite',
+                'marquee': 'marquee 25s linear infinite',
             },
             keyframes: {
                 float: {
