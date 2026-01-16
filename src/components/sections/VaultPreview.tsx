@@ -73,7 +73,7 @@ export const VaultPreview = ({ scrollTo }: VaultPreviewProps) => {
                         {/* Screen Content */}
                         <div className="bg-[#191919] rounded-[8px] overflow-hidden border border-[#333] aspect-[16/10] relative group">
                             <img
-                                src="/notion_vault_screenshot.png"
+                                src="https://images.unsplash.com/photo-1667372393119-c85c02088947?auto=format&fit=crop&w=1600&q=80"
                                 alt="Vault Interface Preview"
                                 className="w-full h-full object-cover transition-transform duration-[10s] ease-linear group-hover:scale-110 group-hover:translate-y-[-10%]"
                             />
