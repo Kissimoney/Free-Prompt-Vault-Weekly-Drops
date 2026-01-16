@@ -13,6 +13,7 @@ import { TasteTest } from './components/sections/TasteTest';
 import { PackShowcase } from './components/sections/PackShowcase';
 
 import { SEO } from './components/SEO';
+import { StickyCTA } from './components/sections/StickyCTA';
 
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -67,6 +68,9 @@ export default function App() {
 
       {/* Footer Section */}
       <Footer scrollTo={scrollTo} />
+
+      {/* Mobile Sticky CTA */}
+      <StickyCTA scrollTo={scrollTo} />
     </div>
   );
 }
