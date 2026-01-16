@@ -12,9 +12,10 @@ import { Footer } from './components/sections/Footer';
 import { TasteTest } from './components/sections/TasteTest';
 import { PackShowcase } from './components/sections/PackShowcase';
 
+import { SEO } from './components/SEO';
+
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener('scroll', handleScroll);
@@ -25,13 +26,13 @@ export default function App() {
     const element = document.getElementById(id);
     if (element) {
       // Small offset for fixed header if needed, but smooth scroll usually handles well.
-      // The original code passed 'behavior: smooth'.
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
   return (
     <div className="min-h-screen bg-white font-sans text-deepBlue selection:bg-mint/30">
+      <SEO />
       <Navbar isScrolled={isScrolled} scrollTo={scrollTo} />
 
       {/* Hero Section */}
