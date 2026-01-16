@@ -9,6 +9,7 @@ import { AutomationFlow } from './components/sections/AutomationFlow';
 import { RequestForm } from './components/sections/RequestForm';
 import { FAQ } from './components/sections/FAQ';
 import { Footer } from './components/sections/Footer';
+import { TasteTest } from './components/sections/TasteTest';
 
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,6 +38,9 @@ export default function App() {
 
       {/* Vault Preview Section */}
       <VaultPreview scrollTo={scrollTo} />
+
+      {/* Taste Test Section */}
+      <TasteTest />
 
       {/* Weekly Drop Banner */}
       <WeeklyDrop scrollTo={scrollTo} />
