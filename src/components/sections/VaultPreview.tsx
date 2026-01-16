@@ -24,7 +24,7 @@ export const VaultPreview = ({ scrollTo }: VaultPreviewProps) => {
                 </Button>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-32">
                 {PROMPT_CATEGORIES.map((cat, i) => (
                     <button
                         key={i}
@@ -45,6 +45,51 @@ export const VaultPreview = ({ scrollTo }: VaultPreviewProps) => {
                         </div>
                     </button>
                 ))}
+            </div>
+
+            {/* Inside the Vault Preview */}
+            <div className="relative mx-auto max-w-5xl">
+                <div className="text-center mb-16">
+                    <div className="inline-flex items-center gap-2 border border-mint/20 bg-mint/5 px-4 py-1.5 rounded-full text-mint font-bold text-[11px] mb-6 tracking-widest uppercase">
+                        Inside the Vault
+                    </div>
+                    <h3 className="text-4xl md:text-5xl font-heading font-black tracking-tight text-deepBlue mb-6">
+                        See what you actually get.
+                    </h3>
+                    <p className="text-gray-500 text-xl max-w-2xl mx-auto font-medium">
+                        No fluff. Just a clean, organized Notion database with tags, copy-paste prompts, and example images.
+                    </p>
+                </div>
+
+                {/* Laptop Frame */}
+                <div className="relative mx-auto">
+                    {/* Shadow/Glow */}
+                    <div className="absolute inset-0 bg-mint/20 blur-[100px] -z-10 rounded-full opacity-50"></div>
+
+                    <div className="relative bg-[#1a1a1a] rounded-[24px] p-[4%] pt-[2.5%] shadow-2xl ring-1 ring-white/10">
+                        {/* Camera Dot */}
+                        <div className="absolute top-[1.2%] left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-[#333] rounded-full"></div>
+
+                        {/* Screen Content */}
+                        <div className="bg-[#191919] rounded-[8px] overflow-hidden border border-[#333] aspect-[16/10] relative group">
+                            <img
+                                src="/notion_vault_screenshot.png"
+                                alt="Vault Interface Preview"
+                                className="w-full h-full object-cover transition-transform duration-[10s] ease-linear group-hover:scale-110 group-hover:translate-y-[-10%]"
+                            />
+
+                            {/* Play Button Overlay (Optional Suggestion of Interactivity) */}
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-transparent transition-all">
+                                <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 shadow-lg group-hover:scale-110 transition-transform">
+                                    <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Keyboard Base Reflection suggestion */}
+                        <div className="absolute bottom-[-10px] left-4 right-4 h-[10px] bg-[#222] rounded-b-[20px] opacity-50 blur-sm -z-10"></div>
+                    </div>
+                </div>
             </div>
         </section>
     );
