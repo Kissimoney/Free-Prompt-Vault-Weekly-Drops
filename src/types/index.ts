@@ -17,6 +17,9 @@ export interface BestSeller {
   bullets: string[];
   ctaLink: string;
   image: string;
+  description?: string;
+  features?: string[];
+  whatIncluded?: string[];
 }
 
 export interface Testimonial {

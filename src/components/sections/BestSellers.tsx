@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, ShoppingCart } from 'lucide-react';
 import { BEST_SELLERS } from '../../data/constants';
 import { Button } from '../ui/Button';
@@ -41,7 +41,8 @@ export const BestSellers = ({ scrollTo }: BestSellersProps) => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
                 {BEST_SELLERS.map((item, i) => (
-                    <button
+                    <Link
+                        to={`/pack/${item.id}`}
                         key={i}
                         className="group flex flex-col h-full bg-white border border-gray-100 rounded-[48px] overflow-hidden transition-all hover:shadow-[0_50px_100px_rgba(0,0,0,0.1)] hover:-translate-y-3 outline-none text-left"
                         onClick={() => trackIntent(item.name)}
@@ -74,7 +75,7 @@ export const BestSellers = ({ scrollTo }: BestSellersProps) => {
                                 </div>
                             </div>
                         </div>
-                    </button>
+                    </Link>
                 ))}
             </div>
         </section>
