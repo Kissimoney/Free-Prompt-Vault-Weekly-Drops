@@ -32,7 +32,7 @@ export const BEST_SELLERS: BestSeller[] = [
     badge: 'Best Value',
     bullets: ['50+ Pro Prompts', 'Style Reference Guide', 'Infinite Variations'],
     ctaLink: '#',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=400',
+    image: '/nano-banana.png',
     description: "Stop wasting hours guessing keywords. The Nano Banana Prompt Pack is our flagship collection of 50+ high-fidelity scene prompts designed for Midjourney V6. Whether you're creating for Instagram, web design, or client pitch decks, this pack guarantees consistent, stunning results.",
     features: [
       "50+ Copy-Paste Prompts for Photorealistic Scenes",
@@ -53,7 +53,7 @@ export const BEST_SELLERS: BestSeller[] = [
     originalPrice: '$32',
     bullets: ['8-second Master Scenes', 'Product Reveal Hooks', 'Color Grading Metadata'],
     ctaLink: '#',
-    image: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=400',
+    image: '/veo3-ad-scene.png',
     description: "Video is king. This bundle gives you the exact prompts used to generate 8-second cinematic ad loops using Google Veo and Runway Gen-3. Perfect for B-roll, background textures, and high-end product showcases without the film crew.",
     features: [
       "Optimized for Gen-3 & Veo",
