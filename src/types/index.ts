@@ -20,6 +20,7 @@ export interface BestSeller {
   description?: string;
   features?: string[];
   whatIncluded?: string[];
+  tag?: string;
 }
 
 export interface Testimonial {

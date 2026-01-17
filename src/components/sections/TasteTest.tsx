@@ -64,7 +64,7 @@ export const TasteTest = () => {
                         <div className="absolute inset-0 bg-mint rounded-[32px] rotate-3 opacity-20 group-hover:rotate-6 transition-transform duration-500"></div>
                         <div className="relative rounded-[32px] overflow-hidden border border-white/10 aspect-square lg:aspect-auto lg:h-[500px] shadow-2xl">
                             <img
-                                src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=800&q=80"
+                                src="/cyberpunk-noodles.png"
                                 alt="AI Generated Result"
                                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                             />

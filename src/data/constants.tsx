@@ -144,54 +144,53 @@ export const BEST_SELLERS: BestSeller[] = [
       "PDF Reference Guide",
       "Monthly Style Updates"
     ]
-  }
   },
-{
-  id: 'bs7',
+  {
+    id: 'bs7',
     name: 'Viral YouTube Thumbnails',
-      price: '$12',
-        bullets: ['CTR-Optimized Layouts', 'Expression Reference', 'Text Overlay styles'],
-          ctaLink: '#',
-            image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=400',
-              description: "The first thing they see is the thumbnail. If they don't click, they don't watch. This pack includes reliable midjourney prompts for generating high-contrast, click-baity (in a good way) thumbnail backgrounds and character expressions.",
-                features: ["Face Retouching Prompts", "Background Blurs", "Text Placement Guides"],
-                  whatIncluded: ["50 Thumbnail Concepts", "Canva Templates", "CTR Checklist"]
-},
-{
-  id: 'bs8',
+    price: '$12',
+    bullets: ['CTR-Optimized Layouts', 'Expression Reference', 'Text Overlay styles'],
+    ctaLink: '#',
+    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=400',
+    description: "The first thing they see is the thumbnail. If they don't click, they don't watch. This pack includes reliable midjourney prompts for generating high-contrast, click-baity (in a good way) thumbnail backgrounds and character expressions.",
+    features: ["Face Retouching Prompts", "Background Blurs", "Text Placement Guides"],
+    whatIncluded: ["50 Thumbnail Concepts", "Canva Templates", "CTR Checklist"]
+  },
+  {
+    id: 'bs8',
     name: 'IG Reels Caption Hooks',
-      price: '$9',
-        tag: 'Weekly',
-          bullets: ['Viral Hooks Database', 'Call-to-Action Scripts', 'Hashtag Sets'],
-            ctaLink: '#',
-              image: 'https://images.unsplash.com/photo-1611262588024-d12430b98920?auto=format&fit=crop&q=80&w=400',
-                description: "Stop staring at a blank caption box. This database gives you 100+ proven hooks to stop the scroll, plus engagement-driving questions and calls to action for every niche.",
-                  features: ["Psychological Hooks", "Storytelling Structures", "Sales CTAs"],
-                    whatIncluded: ["Notion Caption Builder", "Top 50 Hooks PDF", "Emoji Combinations"]
-},
-{
-  id: 'bs9',
+    price: '$9',
+    tag: 'Weekly',
+    bullets: ['Viral Hooks Database', 'Call-to-Action Scripts', 'Hashtag Sets'],
+    ctaLink: '#',
+    image: 'https://images.unsplash.com/photo-1611262588024-d12430b98920?auto=format&fit=crop&q=80&w=400',
+    description: "Stop staring at a blank caption box. This database gives you 100+ proven hooks to stop the scroll, plus engagement-driving questions and calls to action for every niche.",
+    features: ["Psychological Hooks", "Storytelling Structures", "Sales CTAs"],
+    whatIncluded: ["Notion Caption Builder", "Top 50 Hooks PDF", "Emoji Combinations"]
+  },
+  {
+    id: 'bs9',
     name: 'Brand Identity Gen',
-      price: '$39',
-        bullets: ['Logo Concept Generator', 'Color Palette Extractor', 'Brand Voice Guide'],
-          ctaLink: '#',
-            image: 'https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&q=80&w=400',
-              description: "Build a cohesive brand visual system in minutes. Prompts for generating logo concepts, consistent color palettes across different media, and defining your brand's visual voice.",
-                features: ["Logo Iteration Workflow", "Typography Pairing", "Mockup Generation"],
-                  whatIncluded: ["Brand Style Guidelines Template", "Logo Prompt Library", "Color Theory Guide"]
-},
-{
-  id: 'bs10',
+    price: '$39',
+    bullets: ['Logo Concept Generator', 'Color Palette Extractor', 'Brand Voice Guide'],
+    ctaLink: '#',
+    image: 'https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&q=80&w=400',
+    description: "Build a cohesive brand visual system in minutes. Prompts for generating logo concepts, consistent color palettes across different media, and defining your brand's visual voice.",
+    features: ["Logo Iteration Workflow", "Typography Pairing", "Mockup Generation"],
+    whatIncluded: ["Brand Style Guidelines Template", "Logo Prompt Library", "Color Theory Guide"]
+  },
+  {
+    id: 'bs10',
     name: '30-Day Content Calendar',
-      price: '$24',
-        tag: 'Weekly',
-          bullets: ['30 Days of Ideas', 'Platform Specific Plans', 'Trend Jacking'],
-            ctaLink: '#',
-              image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=400',
-                description: "Never run out of ideas again. A full 30-day content plan adaptable to any niche. Includes prompt chains to generate the actual content for each day's topic.",
-                  features: ["Cross-Platform Strategy", "Content Pillars Definer", "Batch Creation Prompts"],
-                    whatIncluded: ["Notion Calendar Template", "30 Day Prompt Chain", "Analytics Tracker"]
-}
+    price: '$24',
+    tag: 'Weekly',
+    bullets: ['30 Days of Ideas', 'Platform Specific Plans', 'Trend Jacking'],
+    ctaLink: '#',
+    image: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=400',
+    description: "Never run out of ideas again. A full 30-day content plan adaptable to any niche. Includes prompt chains to generate the actual content for each day's topic.",
+    features: ["Cross-Platform Strategy", "Content Pillars Definer", "Batch Creation Prompts"],
+    whatIncluded: ["Notion Calendar Template", "30 Day Prompt Chain", "Analytics Tracker"]
+  }
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
