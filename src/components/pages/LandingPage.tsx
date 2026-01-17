@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar } from '../sections/Navbar';
@@ -16,6 +15,7 @@ import { PackShowcase } from '../sections/PackShowcase';
 import { SEO } from '../SEO';
 import { StickyCTA } from '../sections/StickyCTA';
 import { LogoStrip } from '../sections/LogoStrip';
+import { SocialProof } from '../sections/SocialProof';
 
 export const LandingPage = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -70,6 +70,9 @@ export const LandingPage = () => {
 
             {/* FAQ Accordion Section */}
             <FAQ />
+
+            {/* Social Proof Section */}
+            <SocialProof />
 
             {/* Footer Section */}
             <Footer scrollTo={scrollTo} />

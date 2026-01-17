@@ -1,10 +1,17 @@
 import React from 'react';
-import { Sparkles, Database, Layout, Mail } from 'lucide-react';
+import { Twitter, Linkedin, ShoppingBag, Instagram } from 'lucide-react';
 import { Button } from '../ui/Button';
 
 interface FooterProps {
     scrollTo: (id: string) => void;
 }
+
+const SOCIAL_LINKS = [
+    { icon: Twitter, url: 'https://twitter.com', label: 'Twitter' },
+    { icon: Linkedin, url: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: Instagram, url: 'https://instagram.com', label: 'Instagram' },
+    { icon: ShoppingBag, url: 'https://gumroad.com', label: 'Gumroad' },
+];
 
 export const Footer = ({ scrollTo }: FooterProps) => {
     return (
@@ -23,10 +30,17 @@ export const Footer = ({ scrollTo }: FooterProps) => {
                             Clean templates, strong copy, and prompt systems built for high-performance creators.
                         </p>
                         <div className="flex gap-4">
-                            {[Sparkles, Database, Layout, Mail].map((Icon, idx) => (
-                                <button key={idx} className="w-12 h-12 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-400 transition-all duration-300 hover:text-mint hover:bg-mint/5 hover:border-mint/20 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-mint">
-                                    <Icon size={20} />
-                                </button>
+                            {SOCIAL_LINKS.map((social, idx) => (
+                                <a
+                                    key={idx}
+                                    href={social.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={social.label}
+                                    className="w-12 h-12 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center text-gray-400 transition-all duration-300 hover:text-mint hover:bg-mint/5 hover:border-mint/20 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-mint"
+                                >
+                                    <social.icon size={20} strokeWidth={2} />
+                                </a>
                             ))}
                         </div>
                     </div>
@@ -65,9 +79,9 @@ export const Footer = ({ scrollTo }: FooterProps) => {
                 <div className="pt-16 border-t border-gray-50 flex flex-col md:flex-row items-center justify-between gap-8">
                     <p className="text-gray-400 text-[11px] font-black uppercase tracking-[0.25em]">© 2025 JK Ai Hub. Instant Delivery. No Spam.</p>
                     <div className="flex gap-12 text-[11px] font-black uppercase tracking-[0.25em] text-gray-400">
-                        <a href="#" className="hover:text-mint transition-colors outline-none focus-visible:text-mint">Twitter</a>
-                        <a href="#" className="hover:text-mint transition-colors outline-none focus-visible:text-mint">LinkedIn</a>
-                        <a href="#" className="hover:text-mint transition-colors outline-none focus-visible:text-mint">Gumroad</a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-mint transition-colors outline-none focus-visible:text-mint">Twitter</a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-mint transition-colors outline-none focus-visible:text-mint">LinkedIn</a>
+                        <a href="https://gumroad.com" target="_blank" rel="noopener noreferrer" className="hover:text-mint transition-colors outline-none focus-visible:text-mint">Gumroad</a>
                     </div>
                 </div>
             </div>
