@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronDown } from 'lucide-react';
-import { PROMPT_CATEGORIES } from '../../data/constants';
+import { PROMPT_CATEGORIES, getIcon } from '../../data/constants';
 import { Button } from '../ui/Button';
 
 interface VaultPreviewProps {
@@ -25,24 +25,42 @@ export const VaultPreview = ({ scrollTo }: VaultPreviewProps) => {
                 </Button>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-32">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-32">
                 {PROMPT_CATEGORIES.map((cat, i) => (
                     <Link
                         to={`/pack/${cat.linkId}`}
                         key={i}
-                        className="bg-white border border-gray-100 p-10 rounded-[40px] transition-[transform,shadow] duration-300 ease-out group hover:shadow-[0_20px_40px_rgba(10,37,64,0.08)] hover:-translate-y-1.5 relative text-left outline-none block"
+                        className="bg-white border-2 border-gray-100 p-8 rounded-[32px] transition-all duration-300 ease-out group hover:shadow-[0_20px_50px_rgba(10,37,64,0.12)] hover:-translate-y-2 hover:border-mint/30 relative text-left outline-none block"
                     >
-                        <div className="w-14 h-14 bg-gray-50 text-deepBlue rounded-[22px] flex items-center justify-center font-black text-base mb-8 group-hover:bg-mint group-hover:text-white group-hover:scale-110 group-hover:rotate-3 transition-all uppercase shadow-inner">
-                            {cat.label}
+                        {/* Icon Container */}
+                        <div className="w-16 h-16 bg-gradient-to-br from-mint/10 to-mint/5 rounded-[20px] flex items-center justify-center mb-6 group-hover:bg-mint group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-sm group-hover:shadow-lg group-hover:shadow-mint/20">
+                            <div className="text-mint group-hover:text-white transition-colors">
+                                {getIcon(cat.icon)}
+                            </div>
                         </div>
-                        <h3 className="font-black text-2xl mb-4 tracking-tight group-hover:text-mint transition-colors">{cat.title}</h3>
-                        <p className="text-gray-500 text-base mb-10 leading-relaxed font-medium">{cat.benefit}</p>
+
+                        {/* Title */}
+                        <h3 className="font-black text-xl mb-3 tracking-tight group-hover:text-mint transition-colors leading-tight">
+                            {cat.title}
+                        </h3>
+
+                        {/* Benefit */}
+                        <p className="text-gray-500 text-sm mb-8 leading-relaxed font-medium min-h-[3rem]">
+                            {cat.benefit}
+                        </p>
+
+                        {/* Footer */}
                         <div className="flex items-center justify-between">
-                            <span className={`text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full ${cat.tag === 'Free' ? 'bg-mint/10 text-mint' : cat.tag === 'Pro' ? 'bg-deepBlue text-white' : 'bg-orange-100 text-orange-600'}`}>
+                            <span className={`text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full ${cat.tag === 'Free'
+                                    ? 'bg-mint/10 text-mint'
+                                    : cat.tag === 'Pro'
+                                        ? 'bg-deepBlue/10 text-deepBlue'
+                                        : 'bg-orange-50 text-orange-600'
+                                }`}>
                                 {cat.tag}
                             </span>
-                            <div className="text-deepBlue/40 group-hover:text-mint group-hover:scale-125 transition-all">
-                                <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
+                            <div className="text-gray-300 group-hover:text-mint group-hover:scale-125 transition-all">
+                                <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" strokeWidth={2.5} />
                             </div>
                         </div>
                     </Link>

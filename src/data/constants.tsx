@@ -230,14 +230,18 @@ export const FAQS: FAQItem[] = [
 ];
 
 export const getIcon = (name: string) => {
+  const iconSize = 24;
+  const strokeWidth = 2;
+
   switch (name) {
-    case 'Zap': return <Zap size={20} />;
-    case 'Video': return <Video size={20} />;
-    case 'Image': return <Image size={20} />;
-    case 'MessageSquare': return <MessageSquare size={20} />;
-    case 'Layout': return <Layout size={20} />;
-    case 'Mail': return <Mail size={20} />;
-    case 'Terminal': return <Terminal size={20} />;
-    default: return <Sparkles size={20} />;
+    case 'Zap': return <Zap size={iconSize} strokeWidth={strokeWidth} />;
+    case 'Video': return <Video size={iconSize} strokeWidth={strokeWidth} />;
+    case 'Image': return <Image size={iconSize} strokeWidth={strokeWidth} />;
+    case 'MessageSquare': return <MessageSquare size={iconSize} strokeWidth={strokeWidth} />;
+    case 'Layout': return <Layout size={iconSize} strokeWidth={strokeWidth} />;
+    case 'Mail': return <Mail size={iconSize} strokeWidth={strokeWidth} />;
+    case 'Terminal': return <Terminal size={iconSize} strokeWidth={strokeWidth} />;
+    default: return <Sparkles size={iconSize} strokeWidth={strokeWidth} />;
   }
 };
+
