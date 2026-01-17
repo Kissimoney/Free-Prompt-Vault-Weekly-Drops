@@ -41,41 +41,60 @@ export const BestSellers = ({ scrollTo }: BestSellersProps) => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
                 {BEST_SELLERS.map((item, i) => (
-                    <Link
-                        to={`/pack/${item.id}`}
+                    <div
                         key={i}
-                        className="group flex flex-col h-full bg-white border border-gray-100 rounded-[48px] overflow-hidden transition-all hover:shadow-[0_50px_100px_rgba(0,0,0,0.1)] hover:-translate-y-3 outline-none text-left"
-                        onClick={() => trackIntent(item.name)}
+                        className="group flex flex-col h-full bg-white border border-gray-100 rounded-[40px] overflow-hidden transition-all hover:shadow-[0_50px_100px_rgba(0,0,0,0.1)] hover:-translate-y-2 relative text-left"
                     >
-                        <div className="h-64 bg-gray-100 relative overflow-hidden">
-                            <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s]" />
+                        <Link to={`/pack/${item.id}`} className="h-64 bg-gray-100 relative overflow-hidden block" onClick={() => trackIntent(item.name)}>
+                            <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]" />
                             {item.badge && (
-                                <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-md px-5 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.2em] text-deepBlue shadow-xl">
+                                <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] text-deepBlue shadow-xl">
                                     {item.badge}
                                 </div>
                             )}
-                        </div>
-                        <div className="p-10 flex-1 flex flex-col">
-                            <h3 className="font-black text-2xl mb-5 leading-tight group-hover:text-mint transition-colors">{item.name}</h3>
-                            <div className="space-y-3 mb-10 flex-1">
+                        </Link>
+                        <div className="p-8 flex-1 flex flex-col">
+                            <Link to={`/pack/${item.id}`} className="block group-hover:text-mint transition-colors" onClick={() => trackIntent(item.name)}>
+                                <h3 className="font-black text-2xl mb-5 leading-tight">{item.name}</h3>
+                            </Link>
+
+                            <div className="space-y-3 mb-8 flex-1">
                                 {item.bullets.map((bullet, idx) => (
-                                    <div key={idx} className="flex items-center gap-2 text-gray-500 text-sm font-bold">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-mint flex-shrink-0"></div>
+                                    <div key={idx} className="flex items-start gap-3 text-gray-500 text-sm font-bold leading-snug">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-mint flex-shrink-0 mt-1.5"></div>
                                         {bullet}
                                     </div>
                                 ))}
                             </div>
-                            <div className="flex items-center justify-between mt-auto pt-8 border-t border-gray-50">
-                                <div className="flex flex-col">
-                                    {item.originalPrice && <span className="text-[11px] text-gray-400 line-through font-bold mb-1 uppercase tracking-widest">{item.originalPrice}</span>}
-                                    <span className="text-3xl font-black text-deepBlue tracking-tighter">{item.price}</span>
+
+                            <div className="mt-auto pt-6 border-t border-gray-50">
+                                <div className="flex items-baseline justify-between mb-6">
+                                    <div className="flex flex-col">
+                                        {item.originalPrice && <span className="text-[10px] text-gray-400 line-through font-bold mb-0.5 uppercase tracking-widest">{item.originalPrice}</span>}
+                                        <span className="text-3xl font-black text-deepBlue tracking-tighter">{item.price}</span>
+                                    </div>
                                 </div>
-                                <div className={`btn primary bg-mint text-white font-bold w-14 h-14 rounded-2xl flex items-center justify-center hover:scale-110 transition-transform shadow-lg shadow-mint/10`}>
-                                    <ShoppingCart size={24} />
+
+                                <div className="grid grid-cols-2 gap-3">
+                                    <Link
+                                        to={`/pack/${item.id}`}
+                                        className="flex items-center justify-center px-4 py-3 rounded-xl border-2 border-gray-100 text-deepBlue font-bold text-sm hover:border-deepBlue hover:bg-deepBlue hover:text-white transition-all uppercase tracking-wider"
+                                    >
+                                        View
+                                    </Link>
+                                    <button
+                                        onClick={() => {
+                                            trackIntent(item.name);
+                                            alert("Added to cart! (Demo)");
+                                        }}
+                                        className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-mint text-white font-bold text-sm hover:bg-mint/90 transition-all uppercase tracking-wider shadow-lg shadow-mint/20"
+                                    >
+                                        Add <ShoppingCart size={16} strokeWidth={3} />
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                    </Link>
+                    </div>
                 ))}
             </div>
         </section>
